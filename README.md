@@ -2,5 +2,7 @@
 Track barbell paths.
 
 
+put a gif in here somewhere
 
-initial commit
+
+man like do this later
