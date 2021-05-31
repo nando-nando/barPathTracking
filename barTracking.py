@@ -4,10 +4,10 @@ import os
 
 """
 author: Nando
-Program is used to track the bar movements of a workout then output save a video
-Video is saved as an mp4 and input filepaths are asked for, output filepath is static 
+Program is used to track bar movements of a workout then output save a video
+Video is saved as an mp4 and input file paths are asked for, output file path is static 
 and user only gives the name of the output program.
-The most ideal input video is one that is taken in a side view so full face of plate is present. (Make it easier to track)
+The most ideal input video is one that is taken in a side view so the full face of the plate is present. (Make it easier to track)
 """
 
 
@@ -15,9 +15,9 @@ def getFilePath():
 
     """
     author: Nando
-    Function gets the filepath of the original video
+    Function gets the file path of the original video
     throws: FileNotFoundError -> if the file can't be found/does not exist
-            Exception -> if the file given is not a mp4 file
+            Exception -> if the file given is not an mp4 file
     return: filepath
     """
 
@@ -38,8 +38,8 @@ def getNameOfNewVideo():
 
     """
     author: Nando
-    Function creates filepath for the output video
-    return: filepath
+    Function creates file path for the output video
+    return: file path
     """
 
     destination = input("Enter where the video should be saved: ")
@@ -55,7 +55,7 @@ def createCaptureTracker():
 
     """
     author: Nando
-    Function creates video capture object (can be throught as the video) and tracker objects
+    Function creates video capture object (can be thought as the video) and tracker objects
     return: Video and Tracker objects
     """
 
@@ -87,7 +87,7 @@ def createBoundingBox(video, tracker):
 
     """
     author: Nando
-    Function attempts to intialize the tracker while allowing user to apply a bounding box to object in video
+    Function attempts to initialize the tracker while allowing user to apply a bounding box to an object in the video
     params: video object
     return: video writer object
     """
@@ -116,8 +116,8 @@ def main():
 
     """
     author: Nando
-    Main driver of program
-    Program will end up drawing a circle in the middle of the object being tracked as well as showing the 
+    Main driver of the program
+    The program will end up drawing a circle in the middle of the object being tracked as well as showing the 
     previous path of that object.
     """
     
@@ -134,7 +134,7 @@ def main():
         if not returnValue:
             break
         
-        #find the next pos of object being track, (success is true if object is located)
+        #find the next pos of object being tracked, (success is true if the object is located)
         (success, box) = tracker.update(frame)
 
         if success: #if true
