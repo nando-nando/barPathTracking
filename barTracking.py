@@ -42,10 +42,10 @@ def getNameOfNewVideo():
     return: filepath
     """
 
-    folderWhereIWantOutput = "OUTPUT PATH"
+    destination = input("Enter where the video should be saved: ")
     newFileName = input("Enter the name of the new video: ")
     newFileName = newFileName + ".mp4"
-    finalFilePath = folderWhereIWantOutput + newFileName
+    finalFilePath = destination + newFileName
 
     return finalFilePath
 
@@ -138,7 +138,7 @@ def main():
         (success, box) = tracker.update(frame)
 
         if success: #if true
-            #gives coords for bouding box
+            #gives coords for bounding box
             (x, y, w, h) = [int(i) for i in box]
             #draw it
             cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
