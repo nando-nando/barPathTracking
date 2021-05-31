@@ -1,8 +1,6 @@
 # barPathTracking
-Track barbell paths.
+Track barbell paths
 
 
-put a gif in here somewhere
-
-
-man like do this later
+Example:
+![SnippetOf245Squat](videos/nandoSquat245Snippet.gif)
